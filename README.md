@@ -7,3 +7,9 @@
   
 【版本发布】  
   目前1.0版本还无法使用快捷键功能，后续不断测试进行优化。  
+
+【功能展示】 
+目前仅提供判断给定IP是否在白名单的功能。
+![image](https://github.com/Bluecap666/WhitelistCompare/assets/83532219/d17062c3-3f98-4ee4-9ff3-891ffc80d835)
+
+
