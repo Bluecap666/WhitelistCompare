@@ -1,4 +1,4 @@
-【WhitelistCompare】
+【WhitelistCompare】  
 白名单对比小工具，提高安全运营效率。使用python3编写的白名单比对小工具，避免误封IP。
 
 【使用方式】
