@@ -4,13 +4,16 @@ import traceback
 
 def check_ip(event=None):
     try:
-        ip = entry.get()
+        ip = entry.get().strip()
         with open('whitelists.txt', 'r') as file:
             whitelist = file.read().splitlines()
-            if check_ip_in_whitelist(ip, whitelist):
-                result_label.config(text=ip+" 在白名单中！")
+            check_ret=check_ip_in_whitelist(ip, whitelist)
+            if check_ret==True:
+                result_label.config(text=ip+" 在白名单中！",foreground="green")
+            elif check_ret==False:
+                result_label.config(text=ip+" 不在白名单中！",foreground="red")
             else:
-                result_label.config(text=ip+" 不在白名单中！")
+                result_label.config(text="输入的地址或地址段错误❌",foreground="orange")
         entry.delete(0, tk.END)  # 查询完后清空文本框内容
     except Exception as e:
         traceback.print_exc()
@@ -18,17 +21,20 @@ def check_ip(event=None):
         result_label.config(text="发生异常：{}".format(str(e)))
 
 def check_ip_in_whitelist(ip, whitelist):
-    ip_obj = ipaddress.ip_address(ip)
-    for item in whitelist:
-        if '/' in item:  # IP地址段
-            if ipaddress.ip_address(ip) in ipaddress.ip_network(item):
-                return True
-        elif ':' in item:  # IPv6地址或地址段
-            if ipaddress.ip_address(ip) in ipaddress.ip_network(item, False):
-                return True
-        else:  # 单个IP地址
-            if ipaddress.ip_address(ip) == ipaddress.ip_address(item):
-                return True
+    try:
+        ip_obj = ipaddress.ip_address(ip)
+        for item in whitelist:
+            if '/' in item:  # IP地址段
+                if ipaddress.ip_address(ip) in ipaddress.ip_network(item):
+                    return True
+            elif ':' in item:  # IPv6地址或地址段
+                if ipaddress.ip_address(ip) in ipaddress.ip_network(item, False):
+                    return True
+            else:  # 单个IP地址
+                if ipaddress.ip_address(ip) == ipaddress.ip_address(item):
+                    return True
+    except Exception as e:
+        return -1
     return False
 
 def clear_result(event=None):
