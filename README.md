@@ -17,8 +17,8 @@
    新版本优化了输入空格没有去除的问题，同时增加了更好的颜色提示和地址异常处理，以及标题、尾注。后续将补充资产信息查询。  
  编辑好代码后执行打包命令：pyinstaller --onefile --windowed .\whitelistGUI.py  
  更新展示：
- ![image](https://github.com/Bluecap666/WhitelistCompare/assets/83532219/0f93a6de-be4a-4069-b067-5bd97768b4d8)
-![image](https://github.com/Bluecap666/WhitelistCompare/assets/83532219/7514bd3f-78ff-48b7-b3a2-123c66ae0606)
+ ![image](https://github.com/Bluecap666/WhitelistCompare/assets/83532219/0f93a6de-be4a-4069-b067-5bd97768b4d8)  
+![image](https://github.com/Bluecap666/WhitelistCompare/assets/83532219/7514bd3f-78ff-48b7-b3a2-123c66ae0606)  
 ![image](https://github.com/Bluecap666/WhitelistCompare/assets/83532219/0e0e661f-6042-4f1d-bcb6-59dd87644964)
 
  
