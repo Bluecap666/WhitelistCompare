@@ -24,6 +24,12 @@
 
 ![image](https://github.com/Bluecap666/WhitelistCompare/assets/83532219/0e0e661f-6042-4f1d-bcb6-59dd87644964)  
 
+【版本发布2.0】
+ 新增批量查询，支持列表或者逗号分隔格式
+ 127.0.0.1
+ 127.0.0.2
+ 127.0.0.3
+ ...
+ 或者 127.0.0.1，127.0.0.2，127.0.0.3
+ ![image](https://github.com/Bluecap666/WhitelistCompare/assets/83532219/e09d7ce2-4fc5-4442-92f5-65b476101115)
 
- 
- 
